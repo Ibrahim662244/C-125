@@ -1,0 +1,351 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPRTj9niiZEeAlaDqHaQ44Z",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ibrahim662244/C-125/blob/main/C-125\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KHR83UxCuJNF",
+        "outputId": "d465a855-e013-4c6b-94d1-eb58cd404cc7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5, 6, -3, 6.9, 1]\n",
+            "[[2, 5, 7], [4, 7.5, 10]]\n",
+            "<class 'list'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "from numpy import random\n",
+        "import random\n",
+        "\n",
+        "A = [5, 6, -3, 6.9, 1]\n",
+        "B = [[2, 5, 7], [4, 7.5, 10]]\n",
+        "\n",
+        "\n",
+        "print(A)\n",
+        "print(B)\n",
+        "print(type(A))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "C = np.array([1, 5, 8, 3.3, 6.6, 6.9, 4.2, 7, 9])\n",
+        "\n",
+        "print(C)\n",
+        "print(type(C))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "80P4WESMvPnR",
+        "outputId": "99da5fc2-bc57-4231-c153-a649c440f697"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1.  5.  8.  3.3 6.6 6.9 4.2 7.  9. ]\n",
+            "<class 'numpy.ndarray'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "D = [2, 5, 3, 7, 6.66, 3.33, 9.99, 8]\n",
+        "\n",
+        "print(D[7])\n",
+        "print(D[7])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SoeuH2Aovu35",
+        "outputId": "d72e55ce-1407-48a7-ad10-b41f440821f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8\n",
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "F = [[3, 5, 7], [4, 7.6, 11]]\n",
+        "\n",
+        "print(F[0][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cWVLX8ROwNUc",
+        "outputId": "ca8e36af-becc-46c1-c380-273081c7a71e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X = np.array([[7, 8],[6, 9]])\n",
+        "Y = np.array([[4, 20],[5, 10]])\n",
+        "Z = np.array([[0, 0],[0, 0]])\n",
+        "\n",
+        "rows = 2\n",
+        "cols = 2\n",
+        "\n",
+        "for i in range(rows):\n",
+        "  for j in range(cols):\n",
+        "    Z[i][j]= X[i][j] + Y [i][j]\n",
+        "\n",
+        "print(X,\"\\n\")\n",
+        "print(Y,\"\\n\")\n",
+        "print(Z,\"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SzW8NHLdykbS",
+        "outputId": "48d488d4-7e9d-4c65-a06e-48bdd918c362"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[7 8]\n",
+            " [6 9]] \n",
+            "\n",
+            "[[ 4 20]\n",
+            " [ 5 10]] \n",
+            "\n",
+            "[[11 28]\n",
+            " [11 19]] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X = np.array([[7, 8],[6, 9]])\n",
+        "Y = np.array([[4, 20],[5, 10]])\n",
+        "Z = np.array([[0, 0],[0, 0]])\n",
+        "\n",
+        "rows = 2\n",
+        "cols = 2\n",
+        "\n",
+        "for i in range(rows):\n",
+        "  for j in range(cols):\n",
+        "    Z[i][j]= X[i][j] - Y [i][j]\n",
+        "\n",
+        "print(X,\"\\n\")\n",
+        "print(Y,\"\\n\")\n",
+        "print(Z,\"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qSx794BU0b_U",
+        "outputId": "6b4d2d88-bcd4-43ac-b8b2-cd47b3c5824b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[7 8]\n",
+            " [6 9]] \n",
+            "\n",
+            "[[ 4 20]\n",
+            " [ 5 10]] \n",
+            "\n",
+            "[[  3 -12]\n",
+            " [  1  -1]] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X = np.array([[7, 8],[6, 9]])\n",
+        "Y = np.array([[4, 20],[5, 10]])\n",
+        "Z = np.array([[0, 0],[0, 0]])\n",
+        "\n",
+        "rows = 2\n",
+        "cols = 2\n",
+        "\n",
+        "for i in range(rows):\n",
+        "  for j in range(cols):\n",
+        "    Z[i][j]= X[i][j] * Y [i][j]\n",
+        "\n",
+        "print(X,\"\\n\")\n",
+        "print(Y,\"\\n\")\n",
+        "print(Z,\"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U18LtSck0kmE",
+        "outputId": "546b88f0-d893-4056-e76e-49148f860e25"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[7 8]\n",
+            " [6 9]] \n",
+            "\n",
+            "[[ 4 20]\n",
+            " [ 5 10]] \n",
+            "\n",
+            "[[ 28 160]\n",
+            " [ 30  90]] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X = np.array([[7, 8],[6, 9]])\n",
+        "Y = np.array([[4, 20],[5, 10]])\n",
+        "Z = np.array([[0, 0],[0, 0]])\n",
+        "\n",
+        "rows = 2\n",
+        "cols = 2\n",
+        "\n",
+        "for i in range(rows):\n",
+        "  for j in range(cols):\n",
+        "    Z[i][j]= X[i][j] / Y [i][j]\n",
+        "\n",
+        "print(X,\"\\n\")\n",
+        "print(Y,\"\\n\")\n",
+        "print(Z,\"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3Klofaxh0prY",
+        "outputId": "6abd7a15-3fc2-4a6c-a286-b6693ec83d59"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[7 8]\n",
+            " [6 9]] \n",
+            "\n",
+            "[[ 4 20]\n",
+            " [ 5 10]] \n",
+            "\n",
+            "[[1 0]\n",
+            " [1 0]] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "I = np.array([[7, 8],[6, 9]])\n",
+        "L = np.array([[4, 20],[5, 10]])\n",
+        "\n",
+        "I[0][0] = I[0][0] + 3\n",
+        "I[0][0] = 10\n",
+        "print(I[0][0])\n",
+        "print(I)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NCNZjsQl01Mv",
+        "outputId": "1336c14b-e4ad-4d79-c6ec-d6bbe144e1c2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "[[10  8]\n",
+            " [ 6  9]]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
